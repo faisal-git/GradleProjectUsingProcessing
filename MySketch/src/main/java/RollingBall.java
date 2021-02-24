@@ -2,7 +2,7 @@ public class RollingBall {
      int speedAlongX;
      float distanceFromTop;
      int positionOnXaxis=0;
-
+    public static final int Diameter = 10;
     /*public RollingBall(){
         speedAlongX=0;
         distanceFromTop=0;
