@@ -37,6 +37,7 @@ public class Sketch extends PApplet{
     }
 
     private void drawCircles() {
+        int ball;
         for(ball= 1; ball<=TOTALBALLS; ball++){
             speedX=ball;
             positionOnXaxis=drawCount*speedX;
