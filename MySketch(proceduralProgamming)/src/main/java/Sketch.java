@@ -9,7 +9,7 @@ public class Sketch extends PApplet{
     public static final int TOTALBALLS=4;
     // drawCount keeps tracks of how many times draw() is called
     int drawCount=0;
-    int ball,speedX,positionOnXaxis;
+    int speedX,positionOnXaxis;
     float distanceFromTop;
 
 
