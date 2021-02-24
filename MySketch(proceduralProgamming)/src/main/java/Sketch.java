@@ -6,8 +6,14 @@ public class Sketch extends PApplet{
     public static final int HEIGHT = 480;
     public static final int DiameterX = 10;
     public static final int DiameterY = 10;
-    public static final int maxSpeed = 4;
-    int 
+    public static final int TOTALBALLS=4;
+    // drawCount keeps tracks of how many times draw() is called
+    int drawCount=0;
+    int ball,speedX,positionOnXaxis;
+    float distanceFromTop;
+
+
+
 
 
     public static void main(String[] args) {
@@ -17,7 +23,6 @@ public class Sketch extends PApplet{
 
     @Override
     public void settings() {
-        super.settings();
         size(WIDTH, HEIGHT);
     }
 
@@ -32,11 +37,14 @@ public class Sketch extends PApplet{
     }
 
     private void drawCircles() {
-        for(int speedX = 1; speedX<= maxSpeed; speedX++){
-            ellipse(speedX*speedAlongXaxis, (HEIGHT*speedX) / 5, DiameterX, DiameterY);
+        for(ball= 1; ball<=TOTALBALLS; ball++){
+            speedX=ball;
+            positionOnXaxis=drawCount*speedX;
+            distanceFromTop=(HEIGHT*ball)/5;
+            ellipse(positionOnXaxis, distanceFromTop,DiameterX, DiameterY);
 
         }
-        speedAlongXaxis++;
+        drawCount++;
 
     }
 }
