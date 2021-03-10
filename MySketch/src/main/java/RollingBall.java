@@ -27,6 +27,7 @@ class Ball implements Shape {
 
     @Override
     public void draw(PApplet PApplet) {
+
         drawCircle(PApplet);
     }
 

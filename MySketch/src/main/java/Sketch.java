@@ -4,6 +4,9 @@ import java.util.ArrayList;
 public class Sketch extends PApplet{
     public static final int WIDTH = 680;
     public static final int HEIGHT = 480;
+    public static final int DIAMETER=10;
+    public static final int X_COORDINATE = 0;
+    public static final int SPEED_ALONG_X = 1;
     ArrayList<Shape> shapes;
 
     {
@@ -24,9 +27,9 @@ public class Sketch extends PApplet{
     @Override
     public void setup() {
 
-        shapes.add(new Ball(0,HEIGHT/4,1,10));
-        shapes.add(new Ball(0,(HEIGHT*2)/4,2,10));
-        shapes.add(new Ball(0,(HEIGHT*3)/4,3,10));
+        shapes.add(new Ball(X_COORDINATE,HEIGHT/4, SPEED_ALONG_X,DIAMETER));
+        shapes.add(new Ball(X_COORDINATE,(HEIGHT*2)/4,2*SPEED_ALONG_X,DIAMETER));
+        shapes.add(new Ball(X_COORDINATE,(HEIGHT*3)/4,3*SPEED_ALONG_X,DIAMETER));
     }
 
     @Override
